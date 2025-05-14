@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dog Image</title>
+    <title>SPINNER -</title>
     <style>
       body {
         margin: 0;
@@ -19,6 +19,7 @@
       #dog {
         width: 100%;
         margin: 0 auto;
+        cursor: pointer;
       }
 
       #dog img {
@@ -27,7 +28,6 @@
 
       #tail {
         width: 70%;
-        animation: rotate 4s linear infinite;
       }
 
       #tail img {
@@ -42,6 +42,30 @@
         text-align: center;
       }
 
+      #buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      #buttons img {
+        width: 100px;
+        cursor: pointer;
+      }
+
+      #logo {
+        width: 300px;
+        margin: 50px auto;
+        display: block;
+      }
+
+      #arrow {
+        position: fixed;
+        width: 40%;
+        top: 50%;
+        left: 60px;
+      }
+
       @keyframes rotate {
         0% {
           transform: rotate(0deg);
@@ -53,18 +77,28 @@
     </style>
   </head>
   <body>
-    <h1>SPINNER</h1>
-    <div></div>
+    <!-- <h1>SPINNER</h1> -->
+    <img id="logo" src="./spinner_logo.png" alt="" />
+    <div id="buttons">
+      <img id="buy" src="./buy.png" alt="" />
+      <a href="x.com" target="_blank">
+        <img id="x" src="./X.png" alt="" />
+      </a>
+    </div>
+    <img id="arrow" src="./arrow.png" alt="" />
     <div style="display: flex; width: 80%; margin: 0 10%">
-      <div style="z-index: 10; transform: translate(158%, 114px)">
-        <img id="dog" src="spinner.png" alt="A cute dog" />
+      <div style="z-index: 10; transform: translate(158%, 40px)">
+        <img
+          id="dog"
+          src="spinner.png"
+          alt="A cute dog"
+          onclick="handleClick"
+        />
       </div>
       <div style="z-index: 0">
         <img id="tail" src="tail_2.png" alt="A cute dog" />
       </div>
     </div>
-    <script>
-      console.log("hey");
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
