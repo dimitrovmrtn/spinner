@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Image</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #ffb724;
+      }
+
+      #dog {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #dog img {
+        width: 100%;
+      }
+
+      #tail {
+        width: 70%;
+        animation: rotate 4s linear infinite;
+      }
+
+      #tail img {
+        width: 100%;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; width: 100%; margin-top: 10%">
+      <div style="z-index: 10; transform: translate(158%, 114px)">
+        <img id="dog" src="spinner.png" alt="A cute dog" />
+      </div>
+      <div style="z-index: 0">
+        <img id="tail" src="tail.png" alt="A cute dog" />
+      </div>
+    </div>
+    <script>
+      console.log("hey");
+    </script>
+  </body>
+</html>
