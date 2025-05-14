@@ -10,6 +10,10 @@
         padding: 0;
         height: 100vh;
         background-color: #ffb724;
+        background: url("./background.png") no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
       }
 
       #dog {
@@ -30,6 +34,14 @@
         width: 100%;
       }
 
+      h1 {
+        color: white;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px black;
+        font-size: 65px;
+        text-align: center;
+      }
+
       @keyframes rotate {
         0% {
           transform: rotate(0deg);
@@ -41,12 +53,16 @@
     </style>
   </head>
   <body>
-    <div style="display: flex; width: 100%; margin-top: 10%">
+    <h1>SPINNER</h1>
+    <div>
+      <a href="https://x.com/SpinnerThePup" target="_blank">X</a>
+    </div>
+    <div style="display: flex; width: 80%; margin: 0 10%">
       <div style="z-index: 10; transform: translate(158%, 114px)">
         <img id="dog" src="spinner.png" alt="A cute dog" />
       </div>
       <div style="z-index: 0">
-        <img id="tail" src="tail.png" alt="A cute dog" />
+        <img id="tail" src="tail_2.png" alt="A cute dog" />
       </div>
     </div>
     <script>
