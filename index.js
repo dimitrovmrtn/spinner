@@ -20,7 +20,7 @@ function rotate(currentTime) {
 }
 
 function handleClick() {
-  speed = Math.min(speed + 60, 720); // cap at 720 deg/sec
+  speed = Math.min(speed + 60, 1080); // cap at 720 deg/sec
   console.log(`Speed increased to ${speed} degrees/sec`);
 }
 
