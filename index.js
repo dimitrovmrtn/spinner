@@ -2,7 +2,6 @@ const tail = document.getElementById("tail");
 const dog = document.getElementById("dog");
 const reset = document.getElementById("reset");
 const imageText = document.getElementById("image-text");
-console.log("heyyyy");
 
 dog.addEventListener("click", handleClick);
 reset.addEventListener("click", handleReset);
@@ -34,19 +33,23 @@ function rotate(currentTime) {
 }
 
 const heli = new Audio("./assets/heli.mp3");
+const meme = new Audio("./assets/meme.mp3");
 
 function handleClick() {
   speed = Math.min(speed + 120, 6000); // cap at 720 deg/sec
   console.log(`Speed increased to ${speed} degrees/sec`);
   if (speed == 1500) {
     heli.play();
+    meme.play();
   }
 }
 
 function handleReset() {
   speed = 60;
   heli.pause();
-  heli.currentTime(0);
+  heli.currentTime = 0;
+  meme.pause();
+  meme.currentTime = 0;
 }
 
 function copyText() {
