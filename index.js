@@ -53,7 +53,7 @@ function handleReset() {
 }
 
 function copyText() {
-  const caValue = "CRGqUDQ4JQKx5pTqWHRpwiA95fmpuQe2ir92eBi6hgmW";
+  const caValue = "J346b6Lr9cn2WDgrn26cLUUNkrwZ3QozQt9FKifKbonk";
   navigator.clipboard
     .writeText(caValue)
     .then(() => {
