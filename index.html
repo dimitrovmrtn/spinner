@@ -27,7 +27,7 @@
       }
 
       #tail {
-        width: 70%;
+        width: 67%;
       }
 
       #tail img {
@@ -55,7 +55,7 @@
 
       #logo {
         width: 300px;
-        margin: 50px auto;
+        margin: 30px auto;
         display: block;
       }
 
@@ -83,10 +83,26 @@
         width: 100px;
         display: block;
         margin: 0 auto;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         cursor: pointer;
         position: relative;
         z-index: 123;
+      }
+
+      #btn-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #btn-container img {
+        width: 50px;
+      }
+
+      #ca {
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
       }
 
       @keyframes rotate {
@@ -103,7 +119,15 @@
     <!-- <h1>SPINNER</h1> -->
     <img id="logo" src="./assets/spinner_logo.png" alt="" />
     <div id="buttons">
-      <img id="buy" src="./assets/buy.png" alt="" />
+      <a href="https://axiom.trade/pulse" target="_blank">
+        <img id="buy" src="./assets/buy.png" alt="" />
+      </a>
+      <p id="ca">
+        <img
+          src="./assets/ca.png"
+          alt=""
+        />dasdsadsdsadsadasdasdsadasdasdsadsadasdsadsa (click to copy)
+      </p>
       <a href="https://x.com/SpinnerThePup" target="_blank">
         <img id="x" src="./assets/X.png" alt="" />
       </a>
@@ -111,8 +135,10 @@
     <img id="arrow" src="./assets/arrow.png" alt="" />
     <div id="text">
       <img id="image-text" src="./assets/eng.png" alt="" />
-      <button id="eng-button">ENG</button>
-      <button id="ch-button">CH</button>
+      <div id="btn-container">
+        <img id="eng-button" src="./assets/eng-btn.png" />
+        <img id="ch-button" src="./assets/ch-btn.png" />
+      </div>
     </div>
 
     <div style="display: flex; width: 80%; margin: 0 10%; height: 460px">

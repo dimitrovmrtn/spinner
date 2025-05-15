@@ -7,6 +7,8 @@ console.log("heyyyy");
 dog.addEventListener("click", handleClick);
 reset.addEventListener("click", handleReset);
 
+document.getElementById("ca").addEventListener("click", copyText);
+
 document.getElementById("eng-button").addEventListener("click", function () {
   imageText.src = "./assets/eng.png";
 });
@@ -47,14 +49,16 @@ function handleReset() {
   heli.currentTime(0);
 }
 
-// function changeLanguage() {
-//   const currentText = document.getElementById("image-text");
-//   console.log(currentText);
-//   if (currentText.src === "./eng.png") {
-//     imageText.src = "./ch.png";
-//   } else {
-//     imageText.src = "./eng.png";
-//   }
-// }
+function copyText() {
+  const caValue = "CRGqUDQ4JQKx5pTqWHRpwiA95fmpuQe2ir92eBi6hgmW";
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      alert("Text copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+}
 
 requestAnimationFrame(rotate); // start the animation loop
