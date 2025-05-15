@@ -1,7 +1,19 @@
 const tail = document.getElementById("tail");
 const dog = document.getElementById("dog");
+const reset = document.getElementById("reset");
+const imageText = document.getElementById("image-text");
+console.log("heyyyy");
 
 dog.addEventListener("click", handleClick);
+reset.addEventListener("click", handleReset);
+
+document.getElementById("eng-button").addEventListener("click", function () {
+  imageText.src = "./assets/eng.png";
+});
+
+document.getElementById("ch-button").addEventListener("click", function () {
+  imageText.src = "./assets/ch.png";
+});
 
 let speed = 60; // degrees per second (start slow so changes are noticeable)
 let angle = 0;
@@ -19,9 +31,30 @@ function rotate(currentTime) {
   requestAnimationFrame(rotate);
 }
 
+const heli = new Audio("./assets/heli.mp3");
+
 function handleClick() {
-  speed = Math.min(speed + 60, 1080); // cap at 720 deg/sec
+  speed = Math.min(speed + 120, 6000); // cap at 720 deg/sec
   console.log(`Speed increased to ${speed} degrees/sec`);
+  if (speed == 1500) {
+    heli.play();
+  }
 }
+
+function handleReset() {
+  speed = 60;
+  heli.pause();
+  heli.currentTime(0);
+}
+
+// function changeLanguage() {
+//   const currentText = document.getElementById("image-text");
+//   console.log(currentText);
+//   if (currentText.src === "./eng.png") {
+//     imageText.src = "./ch.png";
+//   } else {
+//     imageText.src = "./eng.png";
+//   }
+// }
 
 requestAnimationFrame(rotate); // start the animation loop

@@ -10,7 +10,7 @@
         padding: 0;
         height: 100vh;
         background-color: #ffb724;
-        background: url("./background.png") no-repeat;
+        background: url("./assets/background.png") no-repeat;
         background-size: cover;
         overflow: hidden;
         font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -61,9 +61,32 @@
 
       #arrow {
         position: fixed;
-        width: 40%;
-        top: 50%;
-        left: 60px;
+        width: 20%;
+        top: 53%;
+        left: 14%;
+      }
+
+      #text {
+        position: fixed;
+        z-index: 123232;
+        width: 20%;
+        top: 43%;
+        right: 11%;
+        cursor: pointer;
+      }
+
+      #text img {
+        width: 100%;
+      }
+
+      #reset {
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        cursor: pointer;
+        position: relative;
+        z-index: 123;
       }
 
       @keyframes rotate {
@@ -78,27 +101,34 @@
   </head>
   <body>
     <!-- <h1>SPINNER</h1> -->
-    <img id="logo" src="./spinner_logo.png" alt="" />
+    <img id="logo" src="./assets/spinner_logo.png" alt="" />
     <div id="buttons">
-      <img id="buy" src="./buy.png" alt="" />
-      <a href="x.com" target="_blank">
-        <img id="x" src="./X.png" alt="" />
+      <img id="buy" src="./assets/buy.png" alt="" />
+      <a href="https://x.com/SpinnerThePup" target="_blank">
+        <img id="x" src="./assets/X.png" alt="" />
       </a>
     </div>
-    <img id="arrow" src="./arrow.png" alt="" />
-    <div style="display: flex; width: 80%; margin: 0 10%">
-      <div style="z-index: 10; transform: translate(158%, 40px)">
+    <img id="arrow" src="./assets/arrow.png" alt="" />
+    <div id="text">
+      <img id="image-text" src="./assets/eng.png" alt="" />
+      <button id="eng-button">ENG</button>
+      <button id="ch-button">CH</button>
+    </div>
+
+    <div style="display: flex; width: 80%; margin: 0 10%; height: 460px">
+      <div style="z-index: 10; transform: translate(160%, 35px)">
         <img
           id="dog"
-          src="spinner.png"
+          src="./assets/spinner.png"
           alt="A cute dog"
           onclick="handleClick"
         />
       </div>
       <div style="z-index: 0">
-        <img id="tail" src="tail_2.png" alt="A cute dog" />
+        <img id="tail" src="./assets/tail_2.png" alt="A cute dog" />
       </div>
     </div>
+    <img id="reset" src="./assets/reset.png" alt="" />
     <script src="./index.js"></script>
   </body>
 </html>
