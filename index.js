@@ -55,9 +55,9 @@ function handleReset() {
 function copyText() {
   const caValue = "CRGqUDQ4JQKx5pTqWHRpwiA95fmpuQe2ir92eBi6hgmW";
   navigator.clipboard
-    .writeText(text)
+    .writeText(caValue)
     .then(() => {
-      alert("Text copied to clipboard!");
+      alert("CA copied to clipboard!");
     })
     .catch((err) => {
       console.error("Failed to copy: ", err);
